@@ -58,7 +58,7 @@ public class UltimaMenubarRenderer extends BaseMenuRenderer {
         Menubar menubar = (Menubar) abstractMenu;
         String style = menubar.getStyle();
         String styleClass = menubar.getStyleClass();
-        final String CONTAINER_CLASS = "menu-container";
+        final String CONTAINER_CLASS = "ultima-menu clearfix";
         styleClass = (styleClass == null ? CONTAINER_CLASS : CONTAINER_CLASS + " " + styleClass);
 
         encodeMenu(context, menubar, style, styleClass);
@@ -229,7 +229,13 @@ public class UltimaMenubarRenderer extends BaseMenuRenderer {
 
         if (icon != null) {
             writer.startElement("i", null);
-            writer.writeAttribute("class", icon, null);
+            // writer.writeAttribute("class", icon, null);
+            if (icon.startsWith("material-icons ")) {
+                writer.writeAttribute("class", "material-icons", null);
+                writer.writeText(icon.substring("material-icons ".length()), "value");
+            } else {
+                writer.writeAttribute("class", icon, null);
+            }
             writer.endElement("i");
         }
 
@@ -251,11 +257,18 @@ public class UltimaMenubarRenderer extends BaseMenuRenderer {
 
         writer.startElement("a", null);
         writer.writeAttribute("href", "#", null);
+        writer.writeAttribute("class", "ripplelink", null);
 
         //user icon
         if (icon != null) {
             writer.startElement("i", null);
-            writer.writeAttribute("class", icon, null);
+            // writer.writeAttribute("class", icon, null);
+            if (icon.startsWith("material-icons ")) {
+                writer.writeAttribute("class", "material-icons", null);
+                writer.writeText(icon.substring("material-icons ".length()), "value");
+            } else {
+                writer.writeAttribute("class", icon, null);
+            }
             writer.endElement("i");
         }
 
@@ -281,8 +294,13 @@ public class UltimaMenubarRenderer extends BaseMenuRenderer {
     protected void encodeSubmenuIcon(FacesContext context, Submenu submenu) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
 
+        writer.startElement("span", null);
+        writer.writeAttribute("class", "ink animate", null);
+        writer.endElement("span");
+
         writer.startElement("i", null);
-        writer.writeAttribute("class", "fa fa-fw fa-angle-down", null);
+        writer.writeAttribute("class", "material-icons", null);
+        writer.writeText("&#xE313;", null);
         writer.endElement("i");
     }
 }
