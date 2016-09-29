@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Specification-Version: 1.0.2-SNAPSHOT
+Specification-Version: 1.0.4-SNAPSHOT
 Comment: RaTKiNG
 Built-By: RatKing

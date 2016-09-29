@@ -535,18 +535,29 @@ if(window['PrimeFaces'] && window['PrimeFaces'].widget.Dialog) {
 
 /* JS extensions to support material animations */
 if(PrimeFaces.widget.InputSwitch) {
-    PrimeFaces.widget.InputSwitch.prototype.toggle = function() {
-        var $this = this;
+    PrimeFaces.widget.InputSwitch = PrimeFaces.widget.InputSwitch.extend({
 
-        if(this.input.prop('checked'))
-            this.uncheck();
-        else
-            this.check();
+         init: function(cfg) {
+             this._super(cfg);
 
-        setTimeout(function() {
-            $this.jq.toggleClass('ui-inputswitch-checked');
-        }, 100);
-    };
+             if(this.input.prop('checked')) {
+                 this.jq.addClass('ui-inputswitch-checked');
+             }
+         },
+
+         toggle: function() {
+             var $this = this;
+
+             if(this.input.prop('checked'))
+                 this.uncheck();
+             else
+                 this.check();
+
+             setTimeout(function() {
+                 $this.jq.toggleClass('ui-inputswitch-checked');
+             }, 100);
+         }
+    });
 }
 
 if(PrimeFaces.widget.SelectBooleanButton) {

@@ -1734,11 +1734,15 @@ body.layout-compact {
       height: 20px;
       width: 20px;
       margin-top: -8px; }
+  body.layout-compact .ui-selectonemenu .ui-selectonemenu-label {
+    font-size: 14px; }
   body.layout-compact .ui-selectonemenu-panel .ui-selectonemenu-item {
     font-size: 14px;
     padding: 6px 10px; }
   body.layout-compact .ui-selectonemenu-panel .ui-selectonemenu-item-group {
     padding: 8px; }
+  body.layout-compact .ui-selectcheckboxmenu .ui-selectcheckboxmenu-label-container .ui-selectcheckboxmenu-label {
+    padding-bottom: 1px; }
   body.layout-compact .ui-selectcheckboxmenu .ui-selectcheckboxmenu-trigger {
     height: 20px;
     width: 20px;
