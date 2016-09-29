@@ -300,7 +300,8 @@ public class UltimaMenubarRenderer extends BaseMenuRenderer {
 
         writer.startElement("i", null);
         writer.writeAttribute("class", "material-icons", null);
-        writer.writeText("&#xE313;", null);
+        // writer.writeText("&#xE313;", "value"); // escape = true
+        writer.write("&#xE313;"); // escape = false
         writer.endElement("i");
     }
 }
