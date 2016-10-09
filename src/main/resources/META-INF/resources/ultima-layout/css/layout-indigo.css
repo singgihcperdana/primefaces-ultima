@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Compact */
 /* roboto-300 - latin */
 @font-face {
@@ -8,7 +9,7 @@
   /* IE9 Compat Modes */
   src: local("Roboto Light"),
       local("Roboto-Light"),
-      url("#{resource['ultima-layout:fonts/roboto-v15-latin-300.eot']}?#iefix") format("embedded-opentype"),
+      url("#{resource['ultima-layout:fonts/roboto-v15-latin-300.eot']}#iefix") format("embedded-opentype"),
       url("#{resource['ultima-layout:fonts/roboto-v15-latin-300.woff2']}") format("woff2"),
       url("#{resource['ultima-layout:fonts/roboto-v15-latin-300.woff']}") format("woff"),
       url("#{resource['ultima-layout:fonts/roboto-v15-latin-300.ttf']}") format("truetype"),
@@ -827,7 +828,7 @@ body {
         transition: all 0.3s;
         font-size: 36px; }
         .layout-wrapper .topbar .topbar-right #menu-button i:before {
-          content: "chevron_left"; }
+          content: ""; }
       .layout-wrapper .topbar .topbar-right #menu-button.menu-button-rotate i {
         -webkit-transform: rotate(180deg);
         -moz-transform: rotate(180deg);
@@ -994,7 +995,7 @@ body {
     /* Support for IE. */
     font-feature-settings: 'liga'; }
     .layout-wrapper.menu-layout-overlay .topbar .topbar-right #menu-button i:before {
-      content: "chevron_right"; }
+      content: ""; }
 .layout-wrapper .layout-main {
   padding: 95px 15px 15px 15px;
   -moz-transition: margin-left 0.3s;
@@ -1564,7 +1565,7 @@ body.layout-compact {
       font-feature-settings: 'liga';
       font-size: 20px; }
       body.layout-compact .ui-paginator .ui-paginator-next:before {
-        content: "navigate_next"; }
+        content: ""; }
       body.layout-compact .ui-paginator .ui-paginator-next:before {
         position: relative;
         left: -6px; }
@@ -1595,7 +1596,7 @@ body.layout-compact {
       font-feature-settings: 'liga';
       font-size: 20px; }
       body.layout-compact .ui-paginator .ui-paginator-last:before {
-        content: "last_page"; }
+        content: ""; }
       body.layout-compact .ui-paginator .ui-paginator-last:before {
         position: relative;
         left: -6px; }
@@ -1626,7 +1627,7 @@ body.layout-compact {
       font-feature-settings: 'liga';
       font-size: 20px; }
       body.layout-compact .ui-paginator .ui-paginator-prev:before {
-        content: "navigate_before"; }
+        content: ""; }
       body.layout-compact .ui-paginator .ui-paginator-prev:before {
         position: relative;
         left: -5px; }
@@ -1657,7 +1658,7 @@ body.layout-compact {
       font-feature-settings: 'liga';
       font-size: 20px; }
       body.layout-compact .ui-paginator .ui-paginator-first:before {
-        content: "first_page"; }
+        content: ""; }
       body.layout-compact .ui-paginator .ui-paginator-first:before {
         position: relative;
         left: -5px; }

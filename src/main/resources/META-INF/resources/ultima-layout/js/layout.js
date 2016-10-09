@@ -589,9 +589,17 @@ if(PrimeFaces.widget.SelectBooleanButton) {
 }
 
 PrimeFaces.skinInput = function(input) {
-    if(input.val() != '') {
-        input.addClass('ui-state-filled');
-    }
+    var parentElem = input.parent();
+
+    setTimeout(function() {
+        if(input.val() != '') {
+            input.addClass('ui-state-filled');
+
+            if(parentElem && parentElem.is("span:not('.md-inputfield')")) {
+                parentElem.addClass('inputfield-wrapper');
+            }
+        }
+    }, 1);
 
     input.on('mouseenter', function() {
         $(this).addClass('ui-state-hover');
@@ -601,15 +609,22 @@ PrimeFaces.skinInput = function(input) {
     })
     .on('focus', function() {
         $(this).addClass('ui-state-focus');
+
+        if(parentElem && parentElem.is("span:not('.md-inputfield')")) {
+            parentElem.addClass('inputfield-wrapper');
+        }
     })
     .on('blur', function() {
         $(this).removeClass('ui-state-focus');
-    })
-    .on('input', function(e) {
-        if(input.val() != '')
-            input.addClass('ui-state-filled');
-        else
-            input.removeClass('ui-state-filled');
+
+        if(input.hasClass('hasDatepicker')) {
+            setTimeout(function() {
+                onBlurAnimation(input, parentElem);
+            },150);
+        }
+        else {
+            onBlurAnimation(input, parentElem);
+        }
     });
 
     //aria
@@ -623,3 +638,18 @@ PrimeFaces.skinInput = function(input) {
 
     return this;
 };
+
+function onBlurAnimation(input, parentElem) {
+    if(input.val() != '') {
+        input.addClass('ui-state-filled');
+    }
+    else {
+        input.removeClass('ui-state-filled');
+
+        if(parentElem) {
+            parentElem.removeClass('inputfield-wrapper');
+        }
+    }
+}
+
+
