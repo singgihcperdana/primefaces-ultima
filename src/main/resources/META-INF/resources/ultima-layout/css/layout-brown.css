@@ -828,7 +828,7 @@ body {
         transition: all 0.3s;
         font-size: 36px; }
         .layout-wrapper .topbar .topbar-right #menu-button i:before {
-          content: ""; }
+          content: "chevron_left"; }
       .layout-wrapper .topbar .topbar-right #menu-button.menu-button-rotate i {
         -webkit-transform: rotate(180deg);
         -moz-transform: rotate(180deg);
@@ -995,7 +995,7 @@ body {
     /* Support for IE. */
     font-feature-settings: 'liga'; }
     .layout-wrapper.menu-layout-overlay .topbar .topbar-right #menu-button i:before {
-      content: ""; }
+      content: "chevron_right"; }
 .layout-wrapper .layout-main {
   padding: 95px 15px 15px 15px;
   -moz-transition: margin-left 0.3s;
@@ -1565,7 +1565,7 @@ body.layout-compact {
       font-feature-settings: 'liga';
       font-size: 20px; }
       body.layout-compact .ui-paginator .ui-paginator-next:before {
-        content: ""; }
+        content: "navigate_next"; }
       body.layout-compact .ui-paginator .ui-paginator-next:before {
         position: relative;
         left: -6px; }
@@ -1596,7 +1596,7 @@ body.layout-compact {
       font-feature-settings: 'liga';
       font-size: 20px; }
       body.layout-compact .ui-paginator .ui-paginator-last:before {
-        content: ""; }
+        content: "last_page"; }
       body.layout-compact .ui-paginator .ui-paginator-last:before {
         position: relative;
         left: -6px; }
@@ -1627,7 +1627,7 @@ body.layout-compact {
       font-feature-settings: 'liga';
       font-size: 20px; }
       body.layout-compact .ui-paginator .ui-paginator-prev:before {
-        content: ""; }
+        content: "navigate_before"; }
       body.layout-compact .ui-paginator .ui-paginator-prev:before {
         position: relative;
         left: -5px; }
@@ -1658,7 +1658,7 @@ body.layout-compact {
       font-feature-settings: 'liga';
       font-size: 20px; }
       body.layout-compact .ui-paginator .ui-paginator-first:before {
-        content: ""; }
+        content: "first_page"; }
       body.layout-compact .ui-paginator .ui-paginator-first:before {
         position: relative;
         left: -5px; }
