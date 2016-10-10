@@ -300,10 +300,7 @@ public class UltimaMenubarRenderer extends BaseMenuRenderer {
 
         writer.startElement("i", null);
         writer.writeAttribute("class", "material-icons", null);
-//        // writer.writeText("&#xE313;", "value"); // escape = true
-//        writer.write("&#xE313;"); // escape = false
-        writer.write("keyboard_arrow_down"); // escape = false
-//        writer.writeAttribute("class", "ui-icon ui-icon-keyboard-arrow-down", null);
+        writer.write("expand_more"); // escape = false
         writer.endElement("i");
     }
 }
