@@ -12,7 +12,7 @@ primefaces-ultima与primefaces-ultima-demo是对[官网ultima演示程序](http://www.pri
 * QQ群名：Java EE 7（QQ群号：335997118）
 
 ## 项目介绍
-Ultima（创世纪）是一个高度可定制的高级应用程序模板，具有3种菜单模式（内联Inline、覆盖Overlay、水平Horizontal）、12种主题配色、明暗两种菜单和2种用户配置模式，总共有144种可能的布局组合。
+Ultima（创世纪）是一个高度可定制的高级应用程序模板，具有3种菜单模式、12种主题配色、明暗两种菜单和2种用户配置模式，总共有144种可能的布局组合。
 它基于[material design](https://material.google.com/)（材料设计）语言，是完全响应式的，并进行了触摸优化，采用[SASS](http://www.sass-zh.com/)、CSS3和HTML5构建。
 
 首先，其实有两个项目：
